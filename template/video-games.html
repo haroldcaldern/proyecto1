@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% block title%}Video Games{%endblock%}
+{%block content%}
+<!-- our -->
+<div id="games" class="our">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>VIDEO JUEGOS</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for video_game in list_video_games %}
+            <div class="col-md-12 margin_bottom">
+                <div class="row">
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="two-box">
+                            <figure><img src="/static/img/{{video_game.image}}" alt="#" /></figure>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                        <div class="Games">
+                            <h3>{{video_game.title}}</h3>
+                            <p>{{video_game.description}}</p>
+                          <!--  <a href="/">More information...</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+        <div class="link-container">
+            <a href="/" class="more-link">REGRESAR AL INICIO</a>
+          </div>
+    </div>
+</div>
+
+<!-- end our -->
+{%endblock%}

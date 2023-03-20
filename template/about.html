@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+{% block title%}About us{%endblock%}
+{%block content%}
+<!-- testimonial -->
+<div id="acerca" class="acerca">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Acerca De</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 offset-md-2">
+                <div class="row box">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <div class="testimonial_box">
+                            <figure><img src="{{url_for("static",filename='images/test1.png')}}" alt="#" /></figure>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                        <div class="testimonial_box">
+                            <figure><img src="{{url_for("static",filename='images/test2.png')}}" alt="#" /></figure>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <div class="testimonial_box">
+                            <figure><img src="{{url_for("static",filename='images/test3.png')}}" alt="#" /></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" align="center"><br>
+                    <p>Presentado por </p><br>
+                    <h2>Bramdo Nicolás Cadena Vallejo</h2>
+                    <h2>Daniel Alejandro Arteaga Cardenas</h2>
+                    <a>Seminario de Computación e Informática II <br>UDENAR - IPIALES <br>Ingenieria De Sistemas</a>
+                </div>
+            </div>
+        </div>
+        <div class="link-container">
+            <a href="/" class="more-link">REGRESAR AL INICIO</a>
+          </div>
+
+    </div>
+</div>
+
+<!-- end testimonial -->
+{%endblock%}

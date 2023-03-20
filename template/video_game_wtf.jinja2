@@ -1,0 +1,54 @@
+{% extends "base.html"%}
+{% block title%}Add Video Game{%endblock%}
+{%block content%}
+
+{%for field, errors in form.errors.items()%}
+<div class="alert alert-danger">
+{{form[field].label}}:{{', '.join(errors)}}
+</div>
+{%endfor%}
+<!-- contact -->
+    <div id="contact" class="contact">
+       <div class="row">
+       
+            <div href="/"><img src="{{url_for("static",filename='images/Juego.png')}}" alt="#" /> </div>
+          
+        <div class="container"> <br> 
+
+                <div class="card text-left">
+                    <div class="card-header" style="color: black"><strong> </strong></div>
+                    <div class="card-body">
+                    <div class="caption" style="color: white">
+                    <nav class="navbar navbar-light" style="background-color: #2F46AE ;">
+                                
+                <div class="col-md-12">
+                    <h2> Agregar Video Juego</h2>
+                    <form class="contact_bg" action="/video-games/new" method="POST" enctype="multipart/form-data" novalidate>
+                        {{form.csrf_token}}
+                        <div class="row">
+                            
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            {{form.title(class_="contactus", placeholder='Titulo Del Juego')}}
+                                
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                {{form.photo()}}
+                                <p>Imagen Del Video Juego Agregado</p>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                {{form.description(class_="contactus", placeholder='Descripcion Del Video Juego')}}
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                {{form.submit(class_="send", value="Agregar")}}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="link-container">
+            <a href="/" class="more-link">REGRESAR AL INICIO</a>
+          </div>
+        </div>
+    </nav>
+</div>
+{%endblock%}

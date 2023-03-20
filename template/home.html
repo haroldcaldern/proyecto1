@@ -1,0 +1,64 @@
+{% extends "base.html"%}
+{% block title%}Home{%endblock%}
+{%block content%}
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="header-top">
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="/"><img src="{{url_for("static",filename='images/logo.png')}}" alt="#" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+
+        <!-- end header -->
+        <section class="slider_section">
+            <div class="banner_main">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2 padding_left0">
+                            <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li class="active"> <a href="/">Inicio</a> </li>
+                                        <li> <a href="/video-games/">Video Games</a> </li>
+                                        <li> <a href="/video-games/new">Agregar Video Game</a> </li>
+                                        <li> <a href="/about-us">Acerca De</a> </li><br>
+                                        <a><img src="{{url_for("static",filename='images/udenar.png')}}" alt="#" /></a>   
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                       </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 ">
+                            <div class="text-bg">
+                                <h1>amazing<br> 3d game</h1>
+                            </div>
+                        </div>
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                            <div class="text-img">
+                               <figure><img src="{{url_for("static",filename='images/img.png')}}" alt="#"/></figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    
+       </section>
+    </div>
+</header>
+{%endblock%}
